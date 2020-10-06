@@ -25,7 +25,7 @@
  * @package it.uniroma1.hadoop.pagerank
  */
 
-package it.uniroma1.hadoop.pagerank;
+//package it.uniroma1.hadoop.pagerank;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -58,7 +58,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 //import it.uniroma1.hadoop.pagerank.job2.PageRankJob2Reducer;
 //import it.uniroma1.hadoop.pagerank.job3.PageRankJob3Mapper;
 
-public class PageRankJob1Mapper extends Mapper<LongWritable, Text, Text, Text> {
+class PageRankJob1Mapper extends Mapper<LongWritable, Text, Text, Text> {
 
     @Override
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
@@ -94,7 +94,7 @@ public class PageRankJob1Mapper extends Mapper<LongWritable, Text, Text, Text> {
 
 }
 
-public class PageRankJob1Reducer extends Reducer<Text, Text, Text, Text> {
+class PageRankJob1Reducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
     public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
@@ -125,7 +125,7 @@ public class PageRankJob1Reducer extends Reducer<Text, Text, Text, Text> {
 
 }
 
-public class PageRankJob2Mapper extends Mapper<LongWritable, Text, Text, Text> {
+class PageRankJob2Mapper extends Mapper<LongWritable, Text, Text, Text> {
 
     @Override
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
@@ -167,7 +167,7 @@ public class PageRankJob2Mapper extends Mapper<LongWritable, Text, Text, Text> {
 
 }
 
-public class PageRankJob2Reducer extends Reducer<Text, Text, Text, Text> {
+class PageRankJob2Reducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
     public void reduce(Text key, Iterable<Text> values, Context context) throws IOException,
@@ -222,7 +222,7 @@ public class PageRankJob2Reducer extends Reducer<Text, Text, Text, Text> {
 }
 
 
-public class PageRankJob3Mapper extends Mapper<LongWritable, Text, DoubleWritable, Text> {
+class PageRankJob3Mapper extends Mapper<LongWritable, Text, DoubleWritable, Text> {
 
     @Override
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
