@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Webpage index{% endblock %}
+
+{% block body %}
+    <h1>Webpage index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Url</th>
+                <th>Description</th>
+                <th>Title</th>
+                <th>Pagerank</th>
+                <th>Realindex</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for webpage in webpages %}
+            <tr>
+                <td>{{ webpage.id }}</td>
+                <td>{{ webpage.url }}</td>
+                <td>{{ webpage.description }}</td>
+                <td>{{ webpage.title }}</td>
+                <td>{{ webpage.pagerank }}</td>
+                <td>{{ webpage.realindex }}</td>
+                <td>
+                    <a href="{{ path('webpage_show', {'id': webpage.id}) }}">show</a>
+                    <a href="{{ path('webpage_edit', {'id': webpage.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('webpage_new') }}">Create new</a>
+{% endblock %}

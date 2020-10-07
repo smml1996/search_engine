@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DatasetController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="container" style="padding-top: 5em;">
+    <h1>{{ controller_name }}</h1>
+
+    <p>
+        The dataset used in this project
+        is the <a target="_blank" href="http://webdatacommons.org/hyperlinkgraph/">1st Subdomain Graph</a> that can be found
+        <a target="_blank" href="http://webdatacommons.org/hyperlinkgraph/2012-08/download.html">here</a>
+        that consists of 2 files:
+        <ul>
+            <li>
+                <strong><a target="_blank" href="http://data.dws.informatik.uni-mannheim.de/hyperlinkgraph/2012-08/sd1-index.gz">
+                    Index File:</a></strong> contains a mapping from ids to hosts.
+            </li>
+            <li>
+                <strong><a target="_blank" href="http://data.dws.informatik.uni-mannheim.de/hyperlinkgraph/2012-08/sd1-arc.gz">
+                        Arc File:</a></strong> contains the edges between hosts/ids.
+            </li>
+        </ul>
+
+    </p>
+
+    <p>
+        The graph has <strong>101 million nodes</strong> and <strong>2,403 million edges</strong>.
+    </p>
+
+</div>
+{% endblock %}

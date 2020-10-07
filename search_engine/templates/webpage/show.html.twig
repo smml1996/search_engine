@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Webpage{% endblock %}
+
+{% block body %}
+    <h1>Webpage</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ webpage.id }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ webpage.url }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ webpage.description }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ webpage.title }}</td>
+            </tr>
+            <tr>
+                <th>Pagerank</th>
+                <td>{{ webpage.pagerank }}</td>
+            </tr>
+            <tr>
+                <th>Realindex</th>
+                <td>{{ webpage.realindex }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('webpage_index') }}">back to list</a>
+
+    <a href="{{ path('webpage_edit', {'id': webpage.id}) }}">edit</a>
+
+    {{ include('webpage/_delete_form.html.twig') }}
+{% endblock %}

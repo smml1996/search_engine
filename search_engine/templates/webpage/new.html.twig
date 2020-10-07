@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Webpage{% endblock %}
+
+{% block body %}
+    <h1>Create new Webpage</h1>
+
+    {{ include('webpage/_form.html.twig') }}
+
+    <a href="{{ path('webpage_index') }}">back to list</a>
+{% endblock %}

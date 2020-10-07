@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Webpage{% endblock %}
+
+{% block body %}
+    <h1>Edit Webpage</h1>
+
+    {{ include('webpage/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('webpage_index') }}">back to list</a>
+
+    {{ include('webpage/_delete_form.html.twig') }}
+{% endblock %}
